@@ -67,7 +67,7 @@ public class NestedArrayCalendar extends BaseCalendar
     {
         if (count < MAX_SIZE)
         {
-            int clock = 1;
+            //int clock = 1;
             int index = 0;
             EventArray newEvent = new EventArray(event);
             
@@ -181,7 +181,7 @@ public class NestedArrayCalendar extends BaseCalendar
     @Override
     public void printRange(int start, int range)
     {
-        int counter = 0;
+        //int counter = 0;
         
         if ((start + range) < count)
         {

@@ -41,7 +41,7 @@ class TestingApp
 
             @Override
             public void runRandomizer() {
-                inacRandomizer(NUM_LINKS_TO_TEST);
+                inacRandomizer();
             }
 
             @Override
@@ -58,7 +58,7 @@ class TestingApp
 
             @Override
             public void runRandomizer() {
-                nacRandomizer(NUM_LINKS_TO_TEST);
+                nacRandomizer();
             }
 
             @Override
@@ -75,7 +75,7 @@ class TestingApp
 
             @Override
             public void runRandomizer() {
-                llcRandomizer(NUM_LINKS_TO_TEST);
+                llcRandomizer();
             }
 
             @Override
@@ -156,13 +156,13 @@ class TestingApp
      * and creates that number of unique events to load into the
      * appropriate calendar structure for further testing.
      */
-    private static void inacRandomizer(int numOfLinks)
+    private static void inacRandomizer()
     {
         int[] event = new int[6];
         int YEAR_SECONDS = 31540000;
-        int MAX_ADV = (YEAR_SECONDS / numOfLinks); // limits advancement to under total Seconds in Year
+        int MAX_ADV = (YEAR_SECONDS / TestingApp.NUM_LINKS_TO_TEST); // limits advancement to under total Seconds in Year
         int clock = 0; // event clock time
-        for (int i = 0; i < numOfLinks; i++)
+        for (int i = 0; i < TestingApp.NUM_LINKS_TO_TEST; i++)
         {
             int n = rnd.nextInt(MAX_ADV); // Clock incriment amount
             clock += n; // new event clock time.
@@ -183,13 +183,13 @@ class TestingApp
      * and creates that number of unique events to load into the
      * appropriate calendar structure for further testing.
      */
-    private static void nacRandomizer(int numOfLinks)
+    private static void nacRandomizer()
     {
         int[] event = new int[6];
         int YEAR_SECONDS = 31540000;
-        int MAX_ADV = (YEAR_SECONDS / numOfLinks); // limits advancement to under total Seconds in Year
+        int MAX_ADV = (YEAR_SECONDS / TestingApp.NUM_LINKS_TO_TEST); // limits advancement to under total Seconds in Year
         int clock = 0; // event clock time
-        for (int i = 0; i < numOfLinks; i++)
+        for (int i = 0; i < TestingApp.NUM_LINKS_TO_TEST; i++)
         {
             int n = rnd.nextInt(MAX_ADV); // Clock incriment amount
             clock += n; // new event clock time.
@@ -210,13 +210,13 @@ class TestingApp
      * and creates that number of unique events to load into the
      * appropriate calendar structure for further testing.
      */
-    private static void llcRandomizer(int numOfLinks)
+    private static void llcRandomizer()
     {
         int[] event = new int[6];
         int YEAR_SECONDS = 31540000;
-        int MAX_ADV = (YEAR_SECONDS / numOfLinks); // limits advancement to under total Seconds in Year
+        int MAX_ADV = (YEAR_SECONDS / TestingApp.NUM_LINKS_TO_TEST); // limits advancement to under total Seconds in Year
         int clock = 0; // event clock time
-        for (int i = 0; i < numOfLinks; i++)
+        for (int i = 0; i < TestingApp.NUM_LINKS_TO_TEST; i++)
         {
             int n = rnd.nextInt(MAX_ADV); // Clock incriment amount
             clock += n; // new event clock time.
